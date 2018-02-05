@@ -32,6 +32,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
 		<?php include_once( "st-font.php" ) //googlefont ?>
 		<!--[if lt IE 9]>
+
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<script src="<?php echo esc_url( get_template_directory_uri() ) ; ?>/js/html5shiv.js"></script>
 		<![endif]-->
@@ -39,7 +40,8 @@
 		<?php wp_head(); ?>
 		<?php include_once( "analyticstracking.php" ) //アナリティクスコード ?>
 		<?php get_template_part( 'st-ogp' ); //OGP設定 ?>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri() ?>/js/custom.js"></script>
 	</head>
 	<body <?php body_class(); ?> >
 	
@@ -47,24 +49,28 @@
 			<header id="<?php st_head_class(); ?>">
 			<div class="clearfix" id="headbox">
 			<!-- アコーディオン -->
-			<nav id="s-navi" class="pcnone">
-				<dl class="acordion">
-
-					<dt class="trigger">
-					<p><span class="op"><i class="fa fa-bars"></i></span></p>
-					</dt>
-					<dd class="acordion_tree">
-						<?php
-							$defaults = array(
-							'theme_location' => 'primary-menu',
-							);
-						?>
-						<?php wp_nav_menu( $defaults ); ?>
-						<div class="clear"></div>
-					</dd>
-				</dl>
-			</nav>
+			<div class="sp" id="nav-drawer">
+					<input id="nav-input" type="checkbox" class="nav-unshown">
+					<label id="nav-open" for="nav-input"><span></span></label>
+					<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+					<div id="nav-content">
+						<?php if ( is_active_sidebar( 10 ) ) { ?>
+						<div class="side-topad">
+							<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 10 ) ) : else : //サイドバートップのみのウィジェット ?>
+							<?php endif; ?>
+						</div>
+						<?php } ?>
+					</div>
+				</div>
 			<!-- /アコーディオン -->
+			<a class="sp search-icon" href="#modal-p01"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/search-white.svg" ></a>
+				<section class="modal-window" id="modal-p01">
+					<div class="modal-inner">
+						<?php get_search_form(); ?>
+					</div>
+					<a href="#!" class="modal-close">&times;</a>
+				</section>
+
 			<div id="header-l">
 				<!-- ロゴ又はブログ名 -->
 				<p class="sitename"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -80,10 +86,7 @@
 				<?php get_template_part( 'st-header-widget' ); //電話番号とヘッダー用ウィジェット ?>
 			</div><!-- /#header-r -->
 			</div><!-- /#clearfix -->
-
 				<?php get_template_part( 'st-header-image' ); //カスタムヘッダー画像 ?>
-
-
 				<?php //カテゴリ表示
 						if ( isset($GLOBALS['stdata60']) && $GLOBALS['stdata60'] === 'yes' ) {
 
@@ -92,7 +95,7 @@
 						$categories = get_the_category();
 						$separator = ' ';
 						$output = ''; ?>
-				<p class="st-catgroup">
+				<p class="st-catgroup sp">
 					<?php
 							if ( $categories ) {
 							foreach( $categories as $category ) {
