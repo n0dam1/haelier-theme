@@ -1,0 +1,19 @@
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <path
+      d="M14.5606602,13.1464466 L21.4543271,20.0401135 C21.8467865,20.4325729 21.8492814,21.0649321 21.4571068,21.4571068 C21.0659117,21.8483019 20.4330837,21.8472973 20.0401135,21.4543271 L13.1464466,14.5606602 L14.5606602,13.1464466 Z M9,16.75 C4.71979319,16.75 1.25,13.2802068 1.25,9 C1.25,4.71979319 4.71979319,1.25 9,1.25 C13.2802068,1.25 16.75,4.71979319 16.75,9 C16.75,13.2802068 13.2802068,16.75 9,16.75 Z M9,14.75 C12.1756373,14.75 14.75,12.1756373 14.75,9 C14.75,5.82436269 12.1756373,3.25 9,3.25 C5.82436269,3.25 3.25,5.82436269 3.25,9 C3.25,12.1756373 5.82436269,14.75 9,14.75 Z"
+      id="path-1"></path>
+  </defs>
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="lv2/bar/header_small" transform="translate(-341.000000, -11.000000)">
+      <g id="┗🎨" transform="translate(340.000000, 10.000000)">
+        <mask id="mask-2" fill="white">
+          <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+      </g>
+    </g>
+  </g>
+</svg>
