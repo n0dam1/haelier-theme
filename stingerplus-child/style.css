@@ -6,7 +6,11 @@ Version: 20160525
 @import url('../stingerplus/style.css');
 
 * {
-	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;
+	/*font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;*/
+	font-family :
+			YuGothic,    /* Mac用 */
+			'Yu Gothic', /* Windows用 */
+			sans-serif;
 	margin: 0px;
 	padding: 0px;
 }
@@ -104,25 +108,25 @@ body {
 	min-height: 100%;
 	transition: .4s;
 	height: 100%;
-  overflow: auto;
+	overflow: auto;
 }
 #show {
-		float: left;
-		cursor: pointer;
-		position: fixed;
-		z-index: 2;
-		bottom: 60px;
-		left: 13px;
-		font-size: 10px;
-		text-decoration: none;
-		background: #333;
-		color: #fff;
-		padding: 13px 4px;
-		text-align: center;
-		-moz-opacity: 0.6;
-		opacity: 0.6;
-		border-radius: 6px;
-		font-weight: bold;
+	float: left;
+	cursor: pointer;
+	position: fixed;
+	z-index: 2;
+	bottom: 60px;
+	left: 13px;
+	font-size: 10px;
+	text-decoration: none;
+	background: #333;
+	color: #fff;
+	padding: 13px 4px;
+	text-align: center;
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	border-radius: 6px;
+	font-weight: bold;
 }
 
 #hide {
@@ -186,13 +190,13 @@ a:hover img {
 img.size-full, img.size-large {
 	height: auto;
 	max-width: 100%;
-    display: block;
-    margin: 20px auto;
+	display: block;
+	margin: 20px auto;
 }
 
 .wp-image-3424 {
-    display: block;
-    margin: 20px auto;
+	display: block;
+	margin: 20px auto;
 
 }
 iframe {
@@ -218,7 +222,30 @@ iframe {
 
 /* スマートフォンは表示しない */
 .smanone {
-	display: none;
+	display: block;
+	width: 100%;
+	overflow-y: hidden;
+	padding-left: 10px;
+}
+
+.smanone ul {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+.smanone li {
+	margin-right: 5px;
+	display: inline-block;
+}
+
+.smanone li a {
+	padding: 5px 15px;
+	margin-right: 0;
+	border-radius: 20px;
+	background: #90d3e2;
+	color: #FFF;
+	box-sizing: border-box;
 }
 
 /* clearfix */
@@ -305,91 +332,91 @@ code {
 ---------------------------------*/
 /* 基本の文字 */
 p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #333;
-    letter-spacing: 0.7px;
-    line-height: 1.8;
-    margin: 20px 0 0;
-    vertical-align: baseline;
-    word-wrap: break-word;
+	font-size: 14px;
+	line-height: 1.8;
+	color: #333;
+	letter-spacing: 0.7px;
+	line-height: 1.8;
+	margin: 20px 0 0;
+	vertical-align: baseline;
+	word-wrap: break-word;
 }
 
 /*育毛剤一覧*/
 
 .cosme-box {
-    margin: 1.4rem 0;
-    font-size: 14px;
-    border: 1px solid #cacaca;
-    border-radius: 3px 3px 0 0;
-    background-color: #fff;
-    /* box-shadow: 0 0 5px 0 rgba(163,163,163,.4); */
+	margin: 1.4rem 0;
+	font-size: 14px;
+	border: 1px solid #cacaca;
+	border-radius: 3px 3px 0 0;
+	background-color: #fff;
+	/* box-shadow: 0 0 5px 0 rgba(163,163,163,.4); */
 }
 
 .cosme-box>.heading {
-    box-sizing: border-box;
-    width: 100%;
-    padding: .5em .4em;
-    border-bottom: none;
-    border-radius: 3px 3px 0 0;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 14px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: .5em .4em;
+	border-bottom: none;
+	border-radius: 3px 3px 0 0;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 14px;
 	background: #f4fcff;
 }
 
 .icon-cosme {
-    display: inline-table;
-    line-height: 1;
-    font-size: 2px;
-    vertical-align: text-top;
+	display: inline-table;
+	line-height: 1;
+	font-size: 2px;
+	vertical-align: text-top;
 }
 
 .icon-cosme.cosme-access .bType {
-    color: #333;
-    padding: 4px;
-    font-size: 16px;
-    display: inline-block;
+	color: #333;
+	padding: 4px;
+	font-size: 16px;
+	display: inline-block;
 }
 
 .cosme-box .cosme-img{
-       width: 95%;
-       margin: 0 auto;
-       margin-top: 10px;
-       margin-bottom: 10px;
-       position: relative;
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
 }
 
 .cosme-photobox {
-    display: table-cell;
-    width: 40%;
-    height: 120px;
-    text-align: center;
-    vertical-align: middle;
-	}
+	display: table-cell;
+	width: 40%;
+	height: 120px;
+	text-align: center;
+	vertical-align: middle;
+}
 
 .cosme-specbox {
-    display: table-cell;
-    padding: .5em .2em .5em .5em;
-    vertical-align: middle;
-    font-size: .858em;
+	display: table-cell;
+	padding: .5em .2em .5em .5em;
+	vertical-align: middle;
+	font-size: .858em;
 }
 
 .cosme-specbox  p {
-	 line-height: 1.5;
+	line-height: 1.5;
 }
 
 .cosme-specbox dl {
-    display: table-row;
+	display: table-row;
 }
 
 .cosme-specbox dt {
-	    color: #333;
-	    white-space: nowrap;
-	    text-align: center;
-	    font-size: 12px;
+	color: #333;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 12px;
 }
 
 .cosme-specbox dd {
@@ -411,61 +438,61 @@ p {
 
 .cosme-values {
 	background: #fafafa;
-border: 1px solid #eee;
-box-sizing: border-box;
-margin: 30px 0 0;
-padding: 12px 14px;
-border-radius: 5px;
+	border: 1px solid #eee;
+	box-sizing: border-box;
+	margin: 30px 0 0;
+	padding: 12px 14px;
+	border-radius: 5px;
 }
 .cosme-img > a {
-	 color: #333;
+	color: #333;
 }
 
 
 .cosme-img > a::after {
-    border-color: #333;
-    border-style: solid;
-    border-width: 0 3px 3px 0;
-    content: "";
-    height: 7px;
-    position: absolute;
-    right: -6px;
-    top: 50%;
-    -webkit-transform: translateY(-50%) rotate(-45deg);
-    transform: translateY(-50%) rotate(-45deg);
-    width: 7px;
+	border-color: #333;
+	border-style: solid;
+	border-width: 0 3px 3px 0;
+	content: "";
+	height: 7px;
+	position: absolute;
+	right: -6px;
+	top: 50%;
+	-webkit-transform: translateY(-50%) rotate(-45deg);
+	transform: translateY(-50%) rotate(-45deg);
+	width: 7px;
 }
 
 /*コスメの特徴を表示*/
 .cosme-box .cosme-menu {
-	    margin: 0 10px 15px;
+	margin: 0 10px 15px;
 }
 
 
 .cosme-box .cosme-menu label {
-			margin: 5px 0 0px 0;
-			padding: 12px;
-			background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14145636/clinic_navi_menu.png);
-			background-size: 10px auto;
-			background-repeat: no-repeat;
-			background-position: right 14px center;
-			background-color: #F4F4F4;
-			border: 1px solid #CCCCCC;
-			border-radius: 2px;
-			box-sizing: border-box;
-			color: #665555;
-			display: block;
-			font-size: 10px;
-			font-weight: bold;
-			line-height: 1;
-			padding-bottom: 10px;
-			padding-left: 10px;
-			padding-top: 10px;
-			position: relative;
-			text-decoration: none;
+	margin: 5px 0 0px 0;
+	padding: 12px;
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14145636/clinic_navi_menu.png);
+	background-size: 10px auto;
+	background-repeat: no-repeat;
+	background-position: right 14px center;
+	background-color: #F4F4F4;
+	border: 1px solid #CCCCCC;
+	border-radius: 2px;
+	box-sizing: border-box;
+	color: #665555;
+	display: block;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	position: relative;
+	text-decoration: none;
 }
 .cosme-box .cosme-menu ul {
-    background-color: #ffffff;
+	background-color: #ffffff;
 	transition: all 0.5s;/* サブタイトルの切り替え効果（なめらかに変化）の設定 */
 	margin: 0;			/* サブタイトルボックス外側余白を指定する */
 	padding: 0;			/* サブタイトルボックス内側の余白を指定する */
@@ -473,26 +500,26 @@ border-radius: 5px;
 }
 
 .cosme-hp {
-    margin-top: 12px;
-    text-align: center;
-		margin-bottom: 10px;
+	margin-top: 12px;
+	text-align: center;
+	margin-bottom: 10px;
 
 }
 
 .cosme-hp a {
-    background-color: #F38696;
-    border-bottom: 2px solid #EC6184;
-    border-radius: 4px 4px 6px 6px;
-    color: #FFFFFF;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    text-align: center;
-    text-decoration: none;
-    width: 180px;
-	}
+	background-color: #F38696;
+	border-bottom: 2px solid #EC6184;
+	border-radius: 4px 4px 6px 6px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	text-align: center;
+	text-decoration: none;
+	width: 180px;
+}
 /*.cosme-box .cosme-menu li {
 	padding: 7px;
 }*/
@@ -509,15 +536,20 @@ input[type="checkbox"].cosme-text:checked + ul{
 	height: 110px;		/* メニュー選択時のサブタイトルの高さを指定する */
 }
 
+header .inner {
+	width: 1060px;
+	margin: 0 auto;
+}
+
 /*ブログタイトル*/
 header .sitename {
 	font-size: 22px;
-    width: 180px;
+	width: 180px;
 	color: #fff;
 	line-height: 30px;
 	font-family: 'Oswald', sans-serif;
 	padding: 0px;
-    margin:0 auto;
+	margin:0 auto;
 	margin-bottom: 10px;
 }
 
@@ -533,12 +565,14 @@ header .sitename a:hover {
 }
 
 /* カテゴリページのタイトル */
-.page-category h1 {
+.page-category h1,
+.not-found h1{
 	background: url("./images/category-title.png") no-repeat 10px bottom, repeating-linear-gradient(-45deg, #22c5d6, #22c5d6 4px, #49cfdd 4px, #49cfdd 8px);
 	color: #FFF;
 	padding: 3% 0 3% 23%;
 	background-size: 20% auto, auto auto;
-	height: 50px;
+	height: 60px;
+	box-sizing: border-box;
 }
 /*ブログ名の下のキャプション */
 header h1 {
@@ -603,11 +637,9 @@ header .descr {
 	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
-
 .modal-window .modal-inner #search {
 	background: transparent;
 }
-
 .modal-window .modal-close {
 	display: block;
 	text-indent: -100px;
@@ -621,7 +653,7 @@ header .descr {
 	right: 0;
 	bottom: 0;
 	z-index: 10;
-	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AAAAAMwA0QDNTiUx4gAAAABJRU5ErkJggg==");
+	background: rgba(0,0,0,0.8);
 }
 .modal-window .modal-close:after {
 	content: '\00d7';
@@ -807,12 +839,18 @@ header .descr {
 	top: 20px;
 	left: 20px;
 	color: #FFF;
+	float: none;
+	font-weight: bold;
+}
+
+.entry-date {
+	font-weight: normal;
 }
 
 .title-area .top p {
 	margin: 0;
 	color: #FFF;
-	font-size: 18px;
+	font-size: 13px;
 }
 
 .title-area .entry-title {
@@ -820,19 +858,20 @@ header .descr {
 	bottom: 0;
 	width: 100%;
 	color: #FFF;
-	padding: 20px;
+	padding: 0 20px 20px;
 	box-sizing: border-box;
+	float: left;
 }
 
 
 .entry-title {
 	font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
-		color: #333;
-		font-size: 20px;
-		font-weight: bold;
-		line-height: 1.4;
-		letter-spacing: 0.5px;
-		margin: 14px 0 0 0;
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.4;
+	letter-spacing: 0.5px;
+	margin: 14px 0 0 0;
 }
 
 #st-page .entry-title {
@@ -863,8 +902,8 @@ h2 {
 /*小見出し*/
 .post h3 {
 	font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
-    font-size: 16px;
-    border: none;
+	font-size: 16px;
+	border: none;
 	color: #222222;
 	line-height: 1;
 	padding: 7px 1px;
@@ -898,7 +937,7 @@ dd h3 a {
 	margin: 25px 0 0 0;
 	padding: 0 0 0 10px;
 	list-style: none;
-	}
+}
 
 
 .post ul li {
@@ -907,11 +946,11 @@ dd h3 a {
 	background-size: 6px auto;
 	background-position: left top 15px;
 	padding: 10px 0 0 14px;
-	}
+}
 
 .post h4 {
 	padding: 10px 15px;
-    margin-top: 20px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	background-color: #f3f3f3;
 	font-size: 17px;
@@ -979,8 +1018,8 @@ dd h3 a {
 }
 
 .smanone2 {
-    font-size:10px;
-    color:#333;
+	font-size:10px;
+	color:#333;
 }
 
 
@@ -1026,7 +1065,7 @@ dd h3 a {
 .kanren .no-thumbitiran h3{
 	margin-bottom:0px;
 	font-size:18px;
-    line-height:27px;
+	line-height:27px;
 	padding:0px;
 }
 
@@ -1070,7 +1109,7 @@ dd h3 a {
 }
 
 .post blockquote p {
-	font-size: 1.3rem;
+	/* font-size: 1.3rem; */
 	color: #222222;
 	line-height: 19px;
 	padding-top: 13px;
@@ -1122,7 +1161,7 @@ blockquote > p {
 }*/
 
 blockquote > footer {
-    font-size: 12px;
+	font-size: 12px;
 }
 /* オリジナルスタイルsmartphone */
 
@@ -1390,12 +1429,12 @@ blockquote > footer {
 
 .p-free {
 	padding:0;
-	}
+}
 .p-free:after {
 	content: "";
 	display:block;
 	margin-bottom:30px;
-	}
+}
 
 .p-entry-f {
 	padding:3px 20px;
@@ -1426,7 +1465,8 @@ blockquote > footer {
 
 #footer p {
 	font-size: 12px;
-	margin-bottom:5px;
+	margin-bottom: 0;
+	color: #9c9c9c;
 }
 
 #footer h3 img {
@@ -1612,13 +1652,13 @@ footer .head-telno a{
 
 .kanren dt {
 	float: left;
-	width: 160px;
+	width: 130px;
 	position: relative;
 }
 
 .kanren dt div {
-	width: 160px;
-	height: 100px;
+	width: 120px;
+	height: 80px;
 }
 
 .kanren dt img {
@@ -1639,10 +1679,11 @@ footer .head-telno a{
 
 .kanren dd {
 	padding-left: 0;
-	margin-left: 170px;
+	margin-left: 130px;
 	box-sizing: border-box;
 	border-bottom: 1px solid #c6c6c6;
-	min-height: 100px;
+	min-height: 80px;
+	padding-right: 5px;
 }
 
 .kanren dl {
@@ -1800,13 +1841,13 @@ footer .head-telno a{
 	background: #ccc;
 	/*For Old WebKit*/
 	background: -webkit-linear-gradient(
-	#fff 0%,
-	#f3f3f3 100%
+			#fff 0%,
+			#f3f3f3 100%
 	);
 	/*For Modern Browser*/
 	background: linear-gradient(
-	#fff 0%,
-	#f3f3f3 100%
+			#fff 0%,
+			#f3f3f3 100%
 	);
 
 }
@@ -1862,7 +1903,7 @@ footer .head-telno a{
 	opacity:0.5;
 }
 .tagcloud a:hover {
-	 opacity:0.5;
+	opacity:0.5;
 }
 
 /*--------------------------------
@@ -2008,16 +2049,16 @@ table th {
 	margin-bottom:10px;
 }
 .scroll-box::-webkit-scrollbar {
-	 height: 5px;
+	height: 5px;
 }
 
 .scroll-box::-webkit-scrollbar-track {
-	 border-radius: 5px;
-	 background: #f3f3f3;
+	border-radius: 5px;
+	background: #f3f3f3;
 }
 .scroll-box::-webkit-scrollbar-thumb {
-	 border-radius: 5px;
-	 background: #ccc;
+	border-radius: 5px;
+	background: #ccc;
 }
 
 /*画像 */
@@ -2188,7 +2229,7 @@ nav li a:hover {
 }
 
 .acordion_tree ul.menu li .fa {
-    min-width: 1em;
+	min-width: 1em;
 }
 
 .acordion_tree ul.menu li:last-child {
@@ -2265,19 +2306,19 @@ nav.st5 {
 }
 
 /*#s {*/
-	/*font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;*/
-	/*height: 34px;*/
-	/*color: #333;*/
-	/*font-size: 14px;*/
-	/*border-radius: 0;*/
-	/*border-top-style: none;*/
-	/*border-right-style: none;*/
-	/*border-bottom-style: none;*/
-	/*border-left-style: none;*/
-	/*z-index: 10;*/
-	/*padding: 10px 65px 10px 10px;*/
-	/*width: 100%;*/
-	/*box-sizing: border-box;*/
+/*font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;*/
+/*height: 34px;*/
+/*color: #333;*/
+/*font-size: 14px;*/
+/*border-radius: 0;*/
+/*border-top-style: none;*/
+/*border-right-style: none;*/
+/*border-bottom-style: none;*/
+/*border-left-style: none;*/
+/*z-index: 10;*/
+/*padding: 10px 65px 10px 10px;*/
+/*width: 100%;*/
+/*box-sizing: border-box;*/
 /*}*/
 
 #searchsubmit {
@@ -2386,6 +2427,12 @@ footer .footermenust li:last-child {
 #breadcrumb {
 	font-size: 13px;
 	color: #949494;
+}
+
+#breadcrumb .inner {
+	width: 1060px;
+	margin: 0 auto;
+	display: block;
 }
 
 #breadcrumb img {
@@ -2599,23 +2646,23 @@ SNS
 PAGE TOP
 ---------------------------------*/
 #page-top {
-    position: fixed;
-    z-index: 3;
-    bottom: 60px;
-    right: 10px;
-    font-size: 20px;
+	position: fixed;
+	z-index: 3;
+	bottom: 60px;
+	right: 10px;
+	font-size: 20px;
 }
 
 #page-top a {
-    text-decoration: none;
-    background: #333;
-    color: #fff;
-    padding: 12px 16px;
-    text-align: center;
-    display: block;
-    -moz-opacity: 0.6;
-    opacity: 0.6;
-    border-radius: 30px;
+	text-decoration: none;
+	background: #333;
+	color: #fff;
+	padding: 12px 16px;
+	text-align: center;
+	display: block;
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	border-radius: 30px;
 }
 
 #page-top a:hover {
@@ -2780,7 +2827,7 @@ ul.sub-menu {
 }
 
 /* コメントボタン */
-	#comments input[type="submit"] {
+#comments input[type="submit"] {
 	background-color: #f3f3f3;
 	padding: 10px;
 	-webkit-appearance: none;
@@ -2861,7 +2908,7 @@ NEWS（お知らせ）
 }
 
 #topnews-box div dl dd a:hover {
-color: #b22222;
+	color: #b22222;
 }
 
 /*--------------------------------
@@ -2886,10 +2933,10 @@ color: #b22222;
 /*レイアウト スマートフォン
 ----------------------------------------------------*/
 #wrapper {
-	max-width: 1060px;
 	padding: 0;
 	margin: 0 auto;
 	overflow:hidden;
+	max-width: 100%;
 }
 
 body.fixed-footer #wrapper {
@@ -2911,7 +2958,14 @@ header {
 
 footer {
 	clear: both;
-	padding: 20px 0px;
+	padding: 20px 0px 0;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
+
+.copyright {
+	background: #f2f2f2;
+	color: #a4a4a4;
 	text-align: center;
 }
 
@@ -2942,7 +2996,7 @@ main {
 }
 
 .st-eyecatch img
- {
+{
 	width:100%;
 	background-color: #333;
 }
@@ -2986,7 +3040,7 @@ section {
 }
 
 .colum1 .st-eyecatch
- {
+{
 	margin: 0;
 }
 
@@ -3025,7 +3079,7 @@ section {
 	#s {
 		color:#ccc;
 		padding-top:7px;
-		}
+	}
 }
 
 /*media Queries タブレットサイズ（960px以下）
@@ -3056,7 +3110,7 @@ section {
 		padding: 10px 15px;
 	}
 
-/*-- ここまで --*/
+	/*-- ここまで --*/
 }
 
 /*media Queries タブレットサイズ（600px以上）
@@ -3097,7 +3151,7 @@ section {
 	}
 
 	.st-eyecatch
-	 {
+	{
 		margin: 0;
 	}
 
@@ -3105,7 +3159,7 @@ section {
 
 	.nowhits-eye .pop-box {
 		margin:-21px 0 20px;
-}
+	}
 
 	/*フロントページの場合*/
 	.nowhits-front .pop-box {
@@ -3133,13 +3187,13 @@ section {
 	各フォント設定
 	---------------------------------*/
 	p {
-    font-size: 14px;
-    color: #333;
-    letter-spacing: 0.7px;
-    line-height: 1.8;
-    margin: 20px 0 0;
-    vertical-align: baseline;
-    word-wrap: break-word;
+		font-size: 14px;
+		color: #333;
+		letter-spacing: 0.7px;
+		line-height: 1.8;
+		margin: 20px 0 0;
+		vertical-align: baseline;
+		word-wrap: break-word;
 	}
 
 	dd p {
@@ -3160,12 +3214,12 @@ section {
 
 	/*中見出し*/
 	h2 {
-    font-size: 18px;
-    border-bottom: none;
-    font-weight: bold;
-    margin: 50px 0 0 0;
-    padding: 10px 0;
-    line-height: 1.4;
+		font-size: 18px;
+		border-bottom: none;
+		font-weight: bold;
+		margin: 50px 0 0 0;
+		padding: 10px 0;
+		line-height: 1.4;
 	}
 
 	h2:after {
@@ -3180,49 +3234,49 @@ section {
 
 	/*小見出し*/
 	.post h3 {
-    font-size: 16px;
-    color: #333;
-    border-left: 2px solid #999999;
-    padding: 8px 0 8px 15px;
-    margin: 45px 0 0 0;
-    position: relative;
-    font-weight: bold;
-    color: #333;
+		font-size: 16px;
+		color: #333;
+		border-left: none;
+		padding: 8px 0 8px 15px;
+		margin: 45px 0 0 0;
+		position: relative;
+		font-weight: bold;
+		color: #333;
 	}
 
-    .post h4 {
-	   padding: 10px 15px;
-       margin-top: 20px;
-	   margin-bottom: 20px;
-	   background-color: #f3f3f3;
-	   font-size: 21px;
-	   line-height: 31px;
-    }
+	.post h4 {
+		padding: 10px 15px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background-color: #f3f3f3;
+		font-size: 21px;
+		line-height: 31px;
+	}
 
-    .post h5 {
-	   margin-bottom: 10px;
-	   font-size: 16px;
-	   line-height: 30px;
-    }
+	.post h5 {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 30px;
+	}
 
 	/*リスト */
 	.post ul {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.3;
-    margin: 25px 0 0 0;
-    padding: 0 0 0 10px;
-    list-style: none;
-    }
+		font-size: 14px;
+		color: #333;
+		line-height: 1.3;
+		margin: 25px 0 0 0;
+		padding: 0 0 0 10px;
+		list-style: none;
+	}
 
 
 	.post ul li {
-    list-style: inherit;
-    background: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17053833/list%E7%94%BB%E5%83%8F.png) no-repeat;
-    background-size: 6px auto;
-    background-position: left top 15px;
-    padding: 10px 0 0 14px;
-    }
+		list-style: inherit;
+		background: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17053833/list%E7%94%BB%E5%83%8F.png) no-repeat;
+		background-size: 6px auto;
+		background-position: left top 15px;
+		padding: 10px 0 0 14px;
+	}
 
 	.post ol li {
 		font-size: 20px;
@@ -3239,20 +3293,20 @@ section {
 
 	.kanren .clearfix dd p {
 		font-size:16px;
-	   line-height: 26px;
+		line-height: 26px;
 	}
 
 	/*関連記事タイトルサムネイルなし*/
 	.kanren .no-thumbitiran h3{
 		font-size:16px;
-	   line-height:26px;
+		line-height:26px;
 	}
 
-    /* 任意記事サムネイルありタイトル名 */
-    .kanren.pop-box dd h5, #side .kanren.pop-box dd h5 {
-	   font-size: 18px;
-	   line-height:27px;
-    }
+	/* 任意記事サムネイルありタイトル名 */
+	.kanren.pop-box dd h5, #side .kanren.pop-box dd h5 {
+		font-size: 18px;
+		line-height:27px;
+	}
 
 	/*サイドバーの記事タイトル*/
 	#side h5 {
@@ -3317,7 +3371,7 @@ section {
 	}
 
 	.ad {
-		padding-bottom: 10px;
+		padding-bottom: 0;
 		margin:0px;
 	}
 
@@ -3404,9 +3458,9 @@ section {
 		width:30%;
 	}
 
-/*--------------------------------
-NEWS（お知らせ）
----------------------------------*/
+	/*--------------------------------
+    NEWS（お知らせ）
+    ---------------------------------*/
 
 	#topnews-box div {
 		padding: 0 10px 10px;
@@ -3491,7 +3545,7 @@ NEWS（お知らせ）
 	}
 
 	.colum1 .st-eyecatch
-	 {
+	{
 		margin: 0;
 	}
 
@@ -3520,48 +3574,56 @@ NEWS（お知らせ）
 		overflow:visible;
 	}
 
-	.page-category h1 {
-
-		height: 70px;
-	}
+	.not-found h1,
+	.page-category h1 {height: 120px;}
 
 
 
-/*--------------------------------
-NEWS（お知らせ）
----------------------------------*/
+	/*--------------------------------
+    NEWS（お知らせ）
+    ---------------------------------*/
 
 	#topnews-box {
 		padding: 10px 0;
 	}
 
-/*--------------------------------
-メニュー
----------------------------------*/
+	/*--------------------------------
+    メニュー
+    ---------------------------------*/
 
 	nav.smanone {
 		border-radius: 0;
 		border: none;
 		margin-bottom: 0px;
-		padding: 10px 0;
+		padding: 0;
 		background: #f7fdff;
 		text-align: center;
+		height: 42px;
+		box-sizing: border-box;
+		vertical-align: middle;
 	}
-	header .smanone ul.menu li:first-of-type{
+	header .smanone ul.menu li:first-of-type a {
 		border-left :solid 1px #cfd4d6;
 
 	}
 
 	header .smanone ul.menu li{
 		display: inline-block;
-		padding: 0 10px;
+		padding: 11px 0;
 		list-style-type:none;
 		float:none;
 		width:auto;
-		height:40px;
 		text-align:center;
-		border-right:solid 1px #cfd4d6;
 		position:relative;
+		box-sizing: border-box;
+		border-right: none;
+		height: 42px;
+		vertical-align: middle;
+		box-sizing: border-box;
+	}
+
+	header .smanone ul.menu li a {
+		border-right:solid 1px #cfd4d6;
 	}
 
 	header .smanone ul.menu>li:last-child {
@@ -3569,17 +3631,23 @@ NEWS（お知らせ）
 	}
 
 	header .smanone ul.menu li a{
-		display:block;
+		display: inline;
 		font-size: 13px;
 		overflow:hidden;
 		width:100%;
 		height:100%;
-		line-height:40px;
+		line-height: 20px;
 		color:#030303;
 		text-decoration:none;
 		position:relative;
 		z-index:1;
-        font-weight: bold;
+		font-weight: bold;
+		padding: 0 10px;
+		text-align: center;
+		vertical-align: middle;
+		background: none;
+		border-radius: 0;
+		margin: 0;
 	}
 
 	header .smanone ul.menu li li a{
@@ -3599,7 +3667,7 @@ NEWS（お知らせ）
 	}
 
 	header .smanone ul.sub-menu{
-		display:none;
+		/*display:none;*/
 	}
 
 	/* IE7 対策 */
@@ -3608,8 +3676,8 @@ NEWS（お知らせ）
 	}
 
 	*+html header .smanone ul.menu li{
-	    display:inline;
-	    zoom:1;
+		display:inline;
+		zoom:1;
 	}
 	*+html header .smanone ul.sub-menu{
 		zoom:1;
@@ -3631,6 +3699,20 @@ NEWS（お知らせ）
 	header {
 		padding: 0;
 		background: #FFF;
+
+	}
+
+	header .inner {
+		position: relative;
+	}
+
+	.header-search #search {
+		background: transparent;
+		position: absolute;
+		top: 10px;
+		right: 0;
+		width: 300px;
+		margin: 0;
 	}
 
 	header .sitename {
@@ -3639,9 +3721,11 @@ NEWS（お知らせ）
 	}
 
 	#headbox {
+		width: 1060px;
 		padding: 10px 0px;
-		margin:0;
+		margin:0 auto;
 		text-align:left;
+		position: relative;
 	}
 
 	#headbox img {
@@ -3687,14 +3771,14 @@ NEWS（お知らせ）
 	各フォント設定
 	---------------------------------*/
 	p {
-    font-size: 15px;
-    color: #333;
-    letter-spacing: 0.5px;
-    line-height: 2;
+		font-size: 15px;
+		color: #333;
+		letter-spacing: 0.5px;
+		line-height: 2;
 		text-align: justify;
-    margin: 20px 0 0;
-    vertical-align: baseline;
-    word-wrap: break-word;
+		margin: 20px 0 0;
+		vertical-align: baseline;
+		word-wrap: break-word;
 	}
 
 	dd p {
@@ -3704,11 +3788,11 @@ NEWS（お知らせ）
 	/*記事タイトル*/
 	.entry-title {
 		color: #333;
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 1.4;
-    letter-spacing: 0.5px;
-    margin: 20px 0 0 0;
+		font-size: 26px;
+		font-weight: bold;
+		line-height: 1.4;
+		letter-spacing: 0.5px;
+		margin: 20px 0 0 0;
 	}
 
 	.entry-title a:hover {
@@ -3717,14 +3801,14 @@ NEWS（お知らせ）
 
 	/*中見出し*/
 	h2 {
-    font-size: 22px;
-    border-bottom: none;
-    font-weight: bold;
-    margin: 50px 0 0;
-    color: #333;
-    padding: 10px 10px;
-    line-height: 1.3;
- }
+		font-size: 22px;
+		border-bottom: none;
+		font-weight: bold;
+		margin: 50px 0 0;
+		color: #333;
+		padding: 10px 10px;
+		line-height: 1.3;
+	}
 
 	h2:after {
 		bottom: -10px;
@@ -3738,50 +3822,52 @@ NEWS（お知らせ）
 
 	/*小見出し*/
 	.post h3 {
-    font-size: 18px;
-    color: #333;
-    border-left: 2px solid #999999;
-    padding: 12px 0 12px 18px;
-    margin: 45px 0 0;
-    font-weight: bold;
+		font-size: 18px;
+		color: #333;
+		border-left: none;
+		padding: 12px 0 12px 18px;
+		margin: 45px 0 0;
+		font-weight: bold;
 	}
 
-    .post h4 {
-	   padding: 10px 15px;
-       margin-top: 20px;
-	   margin-bottom: 20px;
-	   background-color: #f3f3f3;
-	   font-size: 16px;
-	   line-height: 26px;
-    }
+	.post h4 {
+		padding: 10px 15px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background-color: #f3f3f3;
+		font-size: 16px;
+		line-height: 26px;
+	}
 
-    .post h5 {
-	   margin-bottom: 10px;
-	   font-size: 18px;
-	   line-height: 26px;
-    }
+	.post h5 {
+		margin-bottom: 10px;
+		font-size: 18px;
+		line-height: 26px;
+	}
 
 	/*リスト */
 	.post ul {
-    font-size: 15px;
-    color: #333;
-    line-height: 1.8;
-    margin-top: 10px;
-	  list-style: none;
-    }
+		font-size: 15px;
+		color: #333;
+		line-height: 1.8;
+		margin-top: 10px;
+		list-style: none;
+	}
 
 	.post ul li {
-    list-style: inherit;
-    background: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17053833/list%E7%94%BB%E5%83%8F.png) no-repeat;
+		list-style: inherit;
+		background: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17053833/list%E7%94%BB%E5%83%8F.png) no-repeat;
 		background-size: 8px auto;
-    background-position: left top 20px;
-    padding: 10px 0 0 16px;
-    }
+		background-position: left top 20px;
+		padding: 10px 0 0 16px;
+	}
 
 	.post ol li {
 		font-size: 15px;
 		line-height: 25px;
 	}
+
+
 
 	/* サイドバーの見出し */
 	#side h5 {
@@ -3801,16 +3887,16 @@ NEWS（お知らせ）
 		line-height: 24px;
 	}
 
-    #side aside #mybox ul li ul li {
-	   font-size: 14px;
-	   line-height: 24px;
-    }
+	#side aside #mybox ul li ul li {
+		font-size: 14px;
+		line-height: 24px;
+	}
 
-    /* 任意記事サムネイルありタイトル名 */
-    .kanren.pop-box dd h5, #side .kanren.pop-box dd h5 {
-	   font-size: 16px;
-	   line-height:26px;
-    }
+	/* 任意記事サムネイルありタイトル名 */
+	.kanren.pop-box dd h5, #side .kanren.pop-box dd h5 {
+		font-size: 16px;
+		line-height:26px;
+	}
 
 	/* オリジナルスタイルPC */
 
@@ -3935,29 +4021,31 @@ NEWS（お知らせ）
 	div#breadcrumb {
 		background: transparent;
 		box-shadow: none;
+		border-bottom: 1px solid #ebebeb;
+		padding: 0 10px 5px;
 	}
 
-/*--------------------------------
-フッターのウィジェットボックス
----------------------------------*/
+	/*--------------------------------
+    フッターのウィジェットボックス
+    ---------------------------------*/
 	#footer p {
 		text-align: center;
 	}
-.footer-r {
-	box-sizing:border-box;
-	padding:0 15px 10px 0px;
-	text-align:left;
-}
+	.footer-r {
+		box-sizing:border-box;
+		padding:0 15px 10px 0px;
+		text-align:left;
+	}
 
-.footer-r > * {
-	font-size:13px;
-	lign-height:18px;
-	text-align:left;
-}
+	.footer-r > * {
+		font-size:13px;
+		lign-height:18px;
+		text-align:left;
+	}
 
-.footer-r ul, .footer-r ol{
-	padding-left:30px;
-}
+	.footer-r ul, .footer-r ol{
+		padding-left:30px;
+	}
 
 	.footer-l {
 		float:left;
@@ -4031,34 +4119,97 @@ NEWS（お知らせ）
 	PCのレイアウト（右サイドバー）
 	---------------------------------*/
 
+	#content {
+		width: 1060px;
+		margin: 0 auto;
+	}
+
 	#contentInner {
 		float: left;
-		width: 100%;
-		margin-right: -300px;
+		width: 1060px;
+		margin-right: -365px;
 	}
 
 	main {
-		margin-right: 320px;
+		margin-right: 365px;
 		margin-left: 0px;
 		background-color: #fff;
 		border-radius: 0;
-		padding: 0 35px 0 0;
+		padding: 9px 0 0 0;
+	}
+
+	.title-area .top {
+		color: #161312;
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 400px;
+		font-size: 13px;
+	}
+	.title-area .entry-date {
+		color: #747374 !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.title-area .top p {
+		color: #161312;
+	}
+
+	.title-area {
+		background: #f7fdff;
+		padding: 15px 40px;
+		overflow: hidden;
+	}
+
+	.title-area .entry-title {
+		color: #303030;
+		padding: 0;
+		width: 400px;
+		margin: 0;
+		position: relative;
+		margin-top: 20px;
+	}
+
+	.st-eyecatch {
+
 	}
 
 	.st-eyecatch
-	 {
-		margin: 0;
-	}
+	{width: 200px;float: right;right: 0;opacity: 1;min-height: auto;}
 
 	.st-eyecatch img
-	 {
+	{
 		border-radius: 0 ;
 	}
 
+
+
 	#side aside {
 		float: right;
-		width: 300px;
-		padding: 0px;
+		width: 345px;
+		padding: 9px 0 0;
+	}
+
+	.ad .accordion-menu  {
+		background: #f7fdff;
+		padding: 0 20px 30px;
+	}
+	.ad .accordion-menu .clinic-header {
+		background: url(./images/svg/clinic.svg) no-repeat center 20px;
+		padding: 0;
+		border-bottom: none;
+		text-align: center;
+	}
+
+	.ad .accordion-menu .clinic-header>span {
+		padding-top: 55px;
+		display: block;
+		padding-bottom: 20px;
+	}
+
+	.accordion-menu label {
+		background: #FFF;
 	}
 
 
@@ -4104,7 +4255,7 @@ NEWS（お知らせ）
 	}
 
 	.colum1 .st-eyecatch
-	 {
+	{
 		margin: 0;
 	}
 
@@ -4204,24 +4355,24 @@ NEWS（お知らせ）
 .aka {color: #c01919!important;font-weight: bold;}
 
 .midori {
-color:#299958 !important;
-font-weight: bold;
+	color:#299958 !important;
+	font-weight: bold;
 }
 
 .orenji {
-color:#B46C39 !important;
-font-weight: bold;
+	color:#B46C39 !important;
+	font-weight: bold;
 }
 
 .ng {
-color:#F50405 !important;
-font-weight: bold;
-font-size: 18px;
+	color:#F50405 !important;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 .str {
-font-weight: bold;
-font-size: 18px;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 .afbutton{
@@ -4281,128 +4432,128 @@ font-size: 18px;
 }
 
 .ladys_icon {
-    display: inline-block;
-    font-size: 10px;
-    color: #ffffff;
-    padding: 0 4px;
-    margin-left: 15px;
-    border-radius: 2px;
-    line-height: 15px;
-    letter-spacing: 1px;
-    vertical-align: text-bottom;
-		background-color: #F25353;
+	display: inline-block;
+	font-size: 10px;
+	color: #ffffff;
+	padding: 0 4px;
+	margin-left: 15px;
+	border-radius: 2px;
+	line-height: 15px;
+	letter-spacing: 1px;
+	vertical-align: text-bottom;
+	background-color: #F25353;
 }
 
 .lowest_icon {
-    display: inline-block;
-    font-size: 15px;
-    color: #ffffff;
-    padding: 4px 8px;
-    margin-left: 15px;
-    border-radius: 2px;
-    line-height: 15px;
-    letter-spacing: 1px;
-    /*vertical-align: text-bottom;*/
-		background-color: #F25353;
+	display: inline-block;
+	font-size: 15px;
+	color: #ffffff;
+	padding: 4px 8px;
+	margin-left: 15px;
+	border-radius: 2px;
+	line-height: 15px;
+	letter-spacing: 1px;
+	/*vertical-align: text-bottom;*/
+	background-color: #F25353;
 }
 
 /*--------------------------------
 jpmap
 ---------------------------------*/
 .jp-map-box {
-    background-color: RGB(240,240,240);
-    background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14013519/map.png);
-    background-size: 382px auto;
-    background-repeat: no-repeat;
-    background-position: 140px 91px;
-    height: 510px;
-    box-sizing: border-box;
-    position: relative;
-    padding: 20px;
+	background-color: RGB(240,240,240);
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14013519/map.png);
+	background-size: 382px auto;
+	background-repeat: no-repeat;
+	background-position: 140px 91px;
+	height: 510px;
+	box-sizing: border-box;
+	position: relative;
+	padding: 20px;
 }
 
 .jp-map-box .region-box {
-    width: 95px;
-    box-sizing: border-box;
-    padding: 3px 3px 3px;
-    background: RGB(240,240,240);
-    position: absolute;
+	width: 95px;
+	box-sizing: border-box;
+	padding: 3px 3px 3px;
+	background: RGB(240,240,240);
+	position: absolute;
 }
 
 
 .jp-map-box .region-box.tohoku {
-    background: RGB(82,135,198);
-    top: 50px;
-    right: 50px;
+	background: RGB(82,135,198);
+	top: 50px;
+	right: 50px;
 }
 
 .jp-map-box .region-box.kanto {
-    background: RGB(228,197,83);
-    bottom: 10px;
-    right: 70px;
+	background: RGB(228,197,83);
+	bottom: 10px;
+	right: 70px;
 }
 
 .jp-map-box .region-box.chubu {
-    background: RGB(225,109,81);
-    top: 10px;
-    right: 270px;
+	background: RGB(225,109,81);
+	top: 10px;
+	right: 270px;
 }
 
 .jp-map-box .region-box.kinki {
-    background: RGB(102,186,200);
-    bottom: 0px;
-    right: 270px;
+	background: RGB(102,186,200);
+	bottom: 0px;
+	right: 270px;
 }
 
 .jp-map-box .region-box.chugoku {
-    background: RGB(120,103,170);
-    top: 10px;
-    right: 420px;
+	background: RGB(120,103,170);
+	top: 10px;
+	right: 420px;
 }
 
 .jp-map-box .region-box.kyushu {
-    background: RGB(199,100,140);
-    bottom: 10px;
-    left: 50px;
+	background: RGB(199,100,140);
+	bottom: 10px;
+	left: 50px;
 }
 
 .jp-map-box .region-box li {
-    list-style: none;
-    background: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    width: 100%;
-    display: inline-block;
-    margin: 1px 0;
-    color: #bdbdbd;
-		padding: 0;
+	list-style: none;
+	background: #ffffff;
+	text-align: center;
+	font-size: 14px;
+	width: 100%;
+	display: inline-block;
+	margin: 1px 0;
+	color: #bdbdbd;
+	padding: 0;
 }
 
 .jp-map-box .region-box li a {
-    background: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    width: 100%;
-    display: inline-block;
-    margin: 1px 0;
+	background: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	width: 100%;
+	display: inline-block;
+	margin: 1px 0;
 }
 
 .jp-map-box .region-box li a:hover {
-    background-color: RGB(248,248,248);
+	background-color: RGB(248,248,248);
 }
 
 /*--------------------------------------
   TOC+
 --------------------------------------*/
 #toc_container {
-    background: #FFF;
-    border: 1px solid #cacaca;
-    box-sizing: border-box;
-    margin: 30px 0 0;
-    padding: 12px 14px;
-    border-radius: 5px;
+	background: #FFF;
+	border: 1px solid #cacaca;
+	box-sizing: border-box;
+	margin: 30px 0 0;
+	padding: 12px 14px;
+	border-radius: 5px;
 }
 
 
@@ -4424,30 +4575,30 @@ jpmap
 }
 
 #toc_container ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: disc;
-    list-style-position: inside;
+	margin: 0;
+	padding: 0;
+	list-style-type: disc;
+	list-style-position: inside;
 }
 
 #toc_container ul li {
-    font-size: 12px;
-    padding-left: 0;
-    line-height: 1.2;
-    background: none;
-    margin: 6px 0 0 0;
-    list-style: none;
+	font-size: 12px;
+	padding-left: 0;
+	line-height: 1.2;
+	background: none;
+	margin: 6px 0 0 0;
+	list-style: none;
 }
 
 #toc_container ul li a:before {
-    content: "■";
-    color: #68c5db;
-    font-size: 14px;
-    vertical-align: middle;
-    line-height: 0;
-    margin-left: 0;
-    letter-spacing: 0;
-    margin-right: 3px;
+	content: "■";
+	color: #68c5db;
+	font-size: 5px;
+	vertical-align: middle;
+	line-height: 0;
+	margin-left: 0;
+	letter-spacing: 0;
+	margin-right: 3px;
 }
 
 #toc_container ul li ul li a:before {
@@ -4458,7 +4609,7 @@ jpmap
 	display: block;
 	text-decoration: none;
 	color: #148fd5;
-    font-weight: 450;
+	font-weight: 450;
 }
 
 #toc_container .toc_list > li > a {
@@ -4475,26 +4626,9 @@ jpmap
   clinic nav
 --------------------------------------*/
 
-
-
-.accordion-menu label {
-			/*display: block;*/
-			/*margin: 5px 0 0px 0;*/
-			/*padding: 12px;*/
-			/*background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14145636/clinic_navi_menu.png);*/
-			/*background-size: 10px auto;*/
-			/*background-repeat: no-repeat;*/
-			/*background-position: right 14px center;*/
-			/*color: #333;*/
-			/*background-color: #fff;*/
-			/*font-weight: bold;*/
-			/*border: 1px solid #c4c4c4;*/
-			/*border-radius: 10px;*/
-			/*padding: 0;*/
-}
 .accordion-menu ul {
-    background-color: #ffffff;
-	transition: all 0.5s;/* サブタイトルの切り替え効果（なめらかに変化）の設定 */
+	background-color: #ffffff;
+	/* transition: all 0.5s; *//* サブタイトルの切り替え効果（なめらかに変化）の設定 */
 	margin: 0;			/* サブタイトルボックス外側余白を指定する */
 	padding: 0;			/* サブタイトルボックス内側の余白を指定する */
 	list-style: none;	/* リストのスタイルを無効にする */
@@ -4502,7 +4636,7 @@ jpmap
 
 .accordion-menu .row li {
 	padding: 7px;		/* リスト（サブタイトル）の余白を指定する */
-    background: none;
+	background: none;
 }
 
 .accordion-menu .row li::after{
@@ -4521,114 +4655,114 @@ input[type="checkbox"].clinic_menu:checked + ul{
 }
 
 .row {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 /*大ちゃんプロフィール*/
 .article-writer {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0 10px 0;
-    margin-top: -10px;
-    border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 10px 0 10px 0;
+	margin-top: -10px;
+	border-top: 1px solid #eee;
 }
 
 .image-box {
-    -webkit-flex: 0 1 50px;
-    flex: 0 1 50px;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    border-radius: 100px;
-    height: 50px;
-    overflow: hidden;
+	-webkit-flex: 0 1 50px;
+	flex: 0 1 50px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	height: 50px;
+	overflow: hidden;
 }
 
 .text-box {
-    flex: 1 1 0%;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0 0 0 15px;
+	flex: 1 1 0%;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 0 15px;
 }
 
 
 /*  クリニック一覧 */
 .clinic-box {
-    margin: 1.4rem 0;
-    font-size: 14px;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px 3px 0 0;
-    background-color: #fff;
-    box-shadow: 0 0 5px 0 rgba(163,163,163,.4);
+	margin: 1.4rem 0;
+	font-size: 14px;
+	border: 1px solid #c4c4c4;
+	border-radius: 3px 3px 0 0;
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 rgba(163,163,163,.4);
 }
 
 .clinic-box>.heading {
-    box-sizing: border-box;
-    width: 100%;
-    padding: .5em .4em;
-    border-bottom: 1px solid #c4c4c4;
-    border-radius: 3px 3px 0 0;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 12px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: .5em .4em;
+	border-bottom: 1px solid #c4c4c4;
+	border-radius: 3px 3px 0 0;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 12px;
 }
 
 .icon-clinic {
-    display: inline-table;
-    line-height: 1;
-    font-size: 2px;
-    vertical-align: text-top;
+	display: inline-table;
+	line-height: 1;
+	font-size: 2px;
+	vertical-align: text-top;
 }
 
 .icon-clinic.clinic-access .bType {
-    color: #333;
-    background-color: RGB(240,240,240);
-    padding: 7px;
-    margin-right: 3px;
-    font-size: 12px;
+	color: #333;
+	background-color: RGB(240,240,240);
+	padding: 7px;
+	margin-right: 3px;
+	font-size: 12px;
 }
 
 .clinic-box .cli-img{
-       width: 95%;
-       margin: 0 auto;
-       margin-top: 10px;
-       margin-bottom: 10px;
-       position: relative;
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
 }
 
 /*AGAクリニックの特徴を表示*/
 .clinic-box > .clinic-menu {
-	    margin: 0 10px 15px;
+	margin: 0 10px 15px;
 }
 
 
 .clinic-box .clinic-menu label {
-			margin: 5px 0 0px 0;
-			padding: 12px;
-			background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14145636/clinic_navi_menu.png);
-			background-size: 10px auto;
-			background-repeat: no-repeat;
-			background-position: right 14px center;
-			background-color: #F4F4F4;
-			border: 1px solid #CCCCCC;
-			border-radius: 2px;
-			box-sizing: border-box;
-			color: #665555;
-			display: block;
-			font-size: 10px;
-			font-weight: bold;
-			line-height: 1;
-			padding-bottom: 10px;
-			padding-left: 10px;
-			padding-top: 10px;
-			position: relative;
-			text-decoration: none;
+	margin: 5px 0 0px 0;
+	padding: 12px;
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/14145636/clinic_navi_menu.png);
+	background-size: 10px auto;
+	background-repeat: no-repeat;
+	background-position: right 14px center;
+	background-color: #F4F4F4;
+	border: 1px solid #CCCCCC;
+	border-radius: 2px;
+	box-sizing: border-box;
+	color: #665555;
+	display: block;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	position: relative;
+	text-decoration: none;
 }
 .clinic-box .clinic-menu ul {
-    background-color: #ffffff;
+	background-color: #ffffff;
 	transition: all 0.5s;/* サブタイトルの切り替え効果（なめらかに変化）の設定 */
 	margin: 0;			/* サブタイトルボックス外側余白を指定する */
 	padding: 0;			/* サブタイトルボックス内側の余白を指定する */
@@ -4636,24 +4770,24 @@ input[type="checkbox"].clinic_menu:checked + ul{
 }
 
 .clinic-hp {
-    margin-top: 12px;
-    text-align: center;
+	margin-top: 12px;
+	text-align: center;
 }
 
 .clinic-hp a {
-    background-color: #F38696;
-    border-bottom: 2px solid #EC6184;
-    border-radius: 4px 4px 6px 6px;
-    color: #FFFFFF;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    text-align: center;
-    text-decoration: none;
-    width: 180px;
-	}
+	background-color: #F38696;
+	border-bottom: 2px solid #EC6184;
+	border-radius: 4px 4px 6px 6px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	text-align: center;
+	text-decoration: none;
+	width: 180px;
+}
 /*.clinic-box .clinic-menu li {
 	padding: 7px;
 }*/
@@ -4675,173 +4809,175 @@ input[type="checkbox"].clinic-text:checked + ul{
 
 /* side-menu*/
 .side-container-nospace {
-    margin: 0;
+	margin: 0;
 }
 
 .side-container {
-    box-sizing: border-box;
-    background-color: #ffffff;
+	box-sizing: border-box;
+	background-color: #ffffff;
 }
 
 .side-header-black {
-    background-color: #68C5DB;
+	background-color: #68C5DB;
 }
 
 .side-header {
-    overflow: hidden;
-    height: 35px;
-    color: #ffffff;
+	overflow: hidden;
+	height: 35px;
+	color: #ffffff;
 }
 
 .side-header_icon.side-header_icon-menu {
-    background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185256/%E8%A8%98%E4%BA%8B%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185256/%E8%A8%98%E4%BA%8B%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
 }
 .side-header_icon.side-header_icon-menu-2 {
-    background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185243/%E9%83%A8%E4%BD%8D%E5%88%A5%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185243/%E9%83%A8%E4%BD%8D%E5%88%A5%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
 }
 
 .side-header_icon.side-header_icon-menu-3 {
-    background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185252/%E8%82%B2%E6%AF%9B%E5%89%A4%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185252/%E8%82%B2%E6%AF%9B%E5%89%A4%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
 }
 .side-header_icon.side-header_icon-menu-4 {
-    background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185247/%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/17185247/%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3.png);
 }
 
 .side-header-black .side-header_icon {
-    background-color: #68C5DB;
+	background-color: #68C5DB;
 }
 
 .side-header_icon {
-    box-sizing: border-box;
-    float: left;
-    display: inline-block;
-    height: 35px;
-    width: 35px;
-    padding: 9px;
-    background-position: center;
-    background-size: 25px;
-    background-repeat: no-repeat;
+	box-sizing: border-box;
+	float: left;
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	padding: 9px;
+	background-position: center;
+	background-size: 25px;
+	background-repeat: no-repeat;
 }
 
 .side-header_title {
-    font-size: 13px;
-    line-height: 35px;
-    float: left;
-    display: inline-block;
-    padding: 0 10px;
-    font-weight: bold;
+	font-size: 13px;
+	line-height: 35px;
+	float: left;
+	display: inline-block;
+	padding: 0 10px;
+	font-weight: bold;
 }
 
 .side-contents-menu {
-    background-color: #ffffff;
-    border: 1px solid #EAF1F2;
-		text-align: left;
+	background-color: #ffffff;
+	border: 1px solid #EAF1F2;
+	text-align: left;
 
 }
 
 .side-clinic-menu {
-    background-color: #ffffff;
-    border: 1px solid #EAF1F2;
+	background-color: #ffffff;
+	border: 1px solid #EAF1F2;
 }
 
 
 .menuItem-header-3, .side-contents-menu h3 {
-    all: initial;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    background-color: #EfF0F0;
-    font-weight: bold;
-    padding: 8px 10px 6px;
-    margin: 0;
-    border-bottom: 1px solid #EAF1F2;
-    border-left: none;
-    font-size: 13px;
-    line-height: 18px;
-    color: #333;
+	all: initial;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	background-color: #EfF0F0;
+	font-weight: bold;
+	padding: 8px 10px 6px;
+	margin: 0;
+	border-bottom: 1px solid #EAF1F2;
+	border-left: none;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333;
 }
 
 .menuItem-header-3, .side-clinic-menu h3 {
-    all: initial;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    background-color: #EfF0F0;
-    font-weight: bold;
-    padding: 8px 10px 6px;
-    margin: 0;
-    border-bottom: 1px solid #EAF1F2;
-    border-left: none;
-    font-size: 13px;
-    line-height: 18px;
-    color: #333;
+	all: initial;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	background-color: #EfF0F0;
+	font-weight: bold;
+	padding: 8px 10px 6px;
+	margin: 0;
+	border-bottom: 1px solid #EAF1F2;
+	border-left: none;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333;
 }
 
 .menuItem-list {
-    margin: 0;
+	margin: 0;
 }
 
 .menuItem-listItem li {
-    list-style: none;
-    border-bottom: 1px solid #EAF1F2;
+	list-style: none;
+	border-bottom: 1px solid #EAF1F2;
 }
 
 .side-contents-menu li {
-    list-style: none;
-    border-bottom: 1px solid #EAF1F2;
+	list-style: none;
+	border-bottom: 1px solid #EAF1F2;
 }
 
 .side-clinic-menu li {
-    list-style: none;
-    border-bottom: 1px solid #EAF1F2;
-		display: block;
-		padding: 8px 10px 6px !important;
-		font-size: 13px;
-		line-height: 18px;
-		font-weight: bold;
+	list-style: none;
+	border-bottom: 1px solid #EAF1F2;
+	display: block;
+	padding: 8px 10px 6px !important;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.side-contents-menu li:last-of-type {
+	border: none;
 }
 
 
 .side-contents-menu a {
-    display: block;
-    padding: 8px 10px 6px;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: bold;
+	display: block;
+	padding: 8px 10px 6px;
+	font-size: 13px;
+	line-height: 18px;
 }
 
 .side-clinic-menu a {
-	  display: block;
-    /*padding: 8px 10px 6px;*/
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: bold;
+	display: block;
+	/*padding: 8px 10px 6px;*/
+	font-size: 13px;
+	line-height: 18px;
 }
 
 .menuItem-header-4, .side-contents-menu h4 {
-    all: initial;
-    display: block;
-    position: relative;
-    color: #333;
-    padding: 8px 10px 6px 30px !important;
-    margin: 0 !important;
-    border-bottom: 1px solid #EAF1F2;
-    font-size: 13px !important;
-    line-height: 18px !important;
-    font-weight: bold !important;
+	all: initial;
+	display: block;
+	position: relative;
+	color: #333;
+	padding: 8px 10px 6px 30px !important;
+	margin: 0 !important;
+	border-bottom: 1px solid #EAF1F2;
+	font-size: 13px !important;
+	line-height: 18px !important;
+	font-weight: bold !important;
 }
 
 .menuItem-header-4::before, .side-contents-menu h4::before {
-    content: "●";
-    position: absolute;
-    top: 7px;
-    left: 10px;
-    color: #90A4AE;
+	content: "●";
+	position: absolute;
+	top: 7px;
+	left: 10px;
+	color: #90A4AE;
 }
 
 /* クリニックを探す */
 .accordion-menu .clinic-header {
-	background: url("./images/svg/clinic.svg") no-repeat 10px center;
+	background: url(./images/svg/clinic.svg) no-repeat 10px center;
 	padding: 10px 0 0 40px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
@@ -4854,17 +4990,19 @@ input[type="checkbox"].clinic-text:checked + ul{
 	color: #030303;
 	letter-spacing: 0;
 	line-height: 14px;
-	vertical-align: calc(50% + 4px);
+	/*vertical-align: calc(50% + 4px);*/
 	margin: 0 0 0 4px;
 }
 
 .accordion-menu a {
 	display: block;
 	text-decoration: none;
+	/* font-size: 1.5rem; */
 	color: #222222;
 	letter-spacing: 0;
 	line-height: 1;
 	padding: 14px 16px 14px 0;
+	/* border-bottom: 1px solid; */
 }
 
 .accordion-menu label {
@@ -4872,10 +5010,8 @@ input[type="checkbox"].clinic-text:checked + ul{
 	color: #222222;
 	letter-spacing: 0;
 	line-height: 1;
-	font-weight: bold;
 	cursor: pointer;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-	width: auto;
 	padding: 14px 16px 14px 16px;
 	position: relative;
 }
@@ -4885,19 +5021,13 @@ input[type="checkbox"].clinic-text:checked + ul{
 	width: 16px;
 	height: 16px;
 	display: inline-block;
-
 	position: absolute;
 	top: 14px;
 	right: 16px;
 	transform: rotate(180deg);
 }
 
-#regi_1:checked~#label_1>.icon,
-#regi_2:checked~#label_2>.icon,
-#regi_3:checked~#label_3>.icon,
-#regi_4:checked~#label_4>.icon,
-#regi_5:checked~#label_5>.icon,
-#regi_6:checked~#label_6>.icon {
+.icon.open {
 	transition: all 0.5s;
 	transform: rotate(0deg);
 }
@@ -4910,14 +5040,12 @@ input[type="checkbox"].clinic-text:checked + ul{
 	list-style: none;
 	margin: 0;
 	padding: 0 0 0 32px;
+	display: none;
 }
 
 .accordion-menu li {
-	max-height: 0;
-	overflow-y: hidden;
-	transition: all 0.5s;
-
 	position: relative;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 .accordion-menu li a:after {
@@ -4926,7 +5054,6 @@ input[type="checkbox"].clinic-text:checked + ul{
 	width: 16px;
 	height: 16px;
 	display: inline-block;
-
 	position: absolute;
 	top: 14px;
 	right: 16px;
@@ -4941,74 +5068,73 @@ input[type="checkbox"].clinic-text:checked + ul{
 	max-height: 44px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
-
 /*口コミの星*/
 
 .star-ratings-css-top {
-  color: #e7711b;
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  display: block;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+	color: #e7711b;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+	display: block;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }
 .star-ratings-css-bottom {
-  padding: 0;
-  display: block;
-  z-index: 0;
+	padding: 0;
+	display: block;
+	z-index: 0;
 }
 .star-ratings-sprite {
-  background: url("https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/22064613/%E6%98%9F-2.png") repeat-x;
-  font-size: 0;
-  height: 21px;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  width: 110px;
-  margin: 0 auto;
+	background: url("https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/22064613/%E6%98%9F-2.png") repeat-x;
+	font-size: 0;
+	height: 21px;
+	line-height: 0;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 110px;
+	margin: 0 auto;
 }
 .star-ratings-sprite-rating {
-  background: url("https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/22064613/%E6%98%9F-2.png") repeat-x;
-  background-position: 0 100%;
-  float: left;
-  height: 21px;
-  display: block;
+	background: url("https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/22064613/%E6%98%9F-2.png") repeat-x;
+	background-position: 0 100%;
+	float: left;
+	height: 21px;
+	display: block;
 }
 
 
 /*フッターバナー*/
 #footer_ban {
-margin: 0 auto;
-padding: 0;
-width: 100%;
-overflow: hidden;
-display: table;
-position: fixed;
-bottom: 0;
-left:0;
-background: #f0f0f0;
-z-index: 9999;
-line-height:0;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	display: table;
+	position: fixed;
+	bottom: 0;
+	left:0;
+	background: #f0f0f0;
+	z-index: 9999;
+	line-height:0;
 }
 
 
 /*引用イメージ*/
 
 .blockquote-img {
-background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/29172008/a407bc8350f197fc6423f3a639d5b506.png);
-background-repeat: no-repeat;
-background-position: left top;
-padding-top: 20px;
-padding-right: 20px;
-padding-bottom: 20px;
-padding-left: 20px;
-margin-top: 20px;
-margin-right: 0px;
-margin-bottom: 20px;
-border-top: 2px solid #f1f1f1;
-border-bottom: 2px solid #f1f1f1;
+	background-image: url(https://s3-ap-northeast-1.amazonaws.com/wp-haelier-media-production/uploads/2017/07/29172008/a407bc8350f197fc6423f3a639d5b506.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	border-top: 2px solid #f1f1f1;
+	border-bottom: 2px solid #f1f1f1;
 }
 
 /*media Queries タブレットサイズ（960px以下）
@@ -5016,7 +5142,7 @@ border-bottom: 2px solid #f1f1f1;
 @media only screen and (max-width: 960x) {
 
 
-/*-- ここまで --*/
+	/*-- ここまで --*/
 }
 
 /*media Queries タブレットサイズ（600px以上）
@@ -5024,6 +5150,6 @@ border-bottom: 2px solid #f1f1f1;
 @media only screen and (min-width: 600px) {
 
 
-/*-- ここまで --*/
+	/*-- ここまで --*/
 }
 

@@ -2,26 +2,29 @@
 
 <!--ぱんくず -->
 <div id="breadcrumb">
-	<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="<?php echo home_url(); ?>" itemprop="url"> <span itemprop="title"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/home.png"></span>
-		</a> &gt; </div>
-	<?php $postcat = get_the_category(); ?>
-	<?php $catid = $postcat[0]->cat_ID; ?>
-	<?php $allcats = array( $catid ); ?>
-	<?php
-			while ( !$catid == 0 ) {
-			$mycat = get_category( $catid );
-			$catid = $mycat->parent;
-			array_push( $allcats, $catid );
-			}
-			array_pop( $allcats );
-			$allcats = array_reverse( $allcats );
-			?>
-	<?php foreach ( $allcats as $catid ): ?>
-	<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-		<a href="<?php echo get_category_link( $catid ); ?>" itemprop="url">
-			<span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a> &gt; </div>
-	<?php endforeach; ?>
+	<div class="inner">
+		<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+			<a href="<?php echo home_url(); ?>" itemprop="url"> <span itemprop="title"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/home.svg"></span>
+			</a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
+		<?php $postcat = get_the_category(); ?>
+		<?php $catid = $postcat[0]->cat_ID; ?>
+		<?php $allcats = array( $catid ); ?>
+		<?php
+				while ( !$catid == 0 ) {
+				$mycat = get_category( $catid );
+				$catid = $mycat->parent;
+				array_push( $allcats, $catid );
+				}
+				array_pop( $allcats );
+				$allcats = array_reverse( $allcats );
+				?>
+		<?php foreach ( $allcats as $catid ): ?>
+		<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+			<a href="<?php echo get_category_link( $catid ); ?>" itemprop="url">
+				<span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span></span> </a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
+		<?php endforeach; ?>
+	</div>
+
 
 </div>
 <!--/ ぱんくず -->

@@ -22,27 +22,28 @@
 
 	<!--ぱんくず -->
 					<div id="breadcrumb">
-						<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-							<a href="<?php echo home_url(); ?>" itemprop="url"> <span itemprop="title">HOME</span>
-							</a> &gt; </div>
-						<?php $postcat = get_the_category(); ?>
-						<?php $catid = $postcat[0]->cat_ID; ?>
-						<?php $allcats = array( $catid ); ?>
-						<?php
-						while ( !$catid == 0 ) {
-							$mycat = get_category( $catid );
-							$catid = $mycat->parent;
-							array_push( $allcats, $catid );
-						}
-						array_pop( $allcats );
-						$allcats = array_reverse( $allcats );
-						?>
-						<?php foreach ( $allcats as $catid ): ?>
+						<div class="inner">
+							<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+								<a href="<?php echo home_url(); ?>" itemprop="url"> <span itemprop="title">HOME</span>
+								</a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
+							<?php $postcat = get_the_category(); ?>
+							<?php $catid = $postcat[0]->cat_ID; ?>
+							<?php $allcats = array( $catid ); ?>
+							<?php
+									while ( !$catid == 0 ) {
+									$mycat = get_category( $catid );
+									$catid = $mycat->parent;
+									array_push( $allcats, $catid );
+									}
+									array_pop( $allcats );
+									$allcats = array_reverse( $allcats );
+									?>
+							<?php foreach ( $allcats as $catid ): ?>
 							<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 								<a href="<?php echo get_category_link( $catid ); ?>" itemprop="url">
-									<span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a> &gt; </div>
-						<?php endforeach; ?>
-
+									<span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span></span> </a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
+							<?php endforeach; ?>
+						</div>
 					</div>
 					<!--/ ぱんくず -->
 
@@ -132,28 +133,6 @@
 						<?php } ?>
 						<!--関連記事-->
 						<?php get_template_part( 'kanren' ); ?>
-
-						<!--ページナビ-->
-						<div class="p-navi clearfix">
-							<dl>
-								<?php
-								$prev_post = get_previous_post();
-								if ( !empty( $prev_post ) ): ?>
-									<dt>PREV</dt>
-									<dd>
-										<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo $prev_post->post_title; ?></a>
-									</dd>
-								<?php endif; ?>
-								<?php
-								$next_post = get_next_post();
-								if ( !empty( $next_post ) ): ?>
-									<dt>NEXT</dt>
-									<dd>
-										<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo $next_post->post_title; ?></a>
-									</dd>
-								<?php endif; ?>
-							</dl>
-						</div>
 					</aside>
 
 				</div>

@@ -47,67 +47,47 @@
 	
 		<div id="wrapper" class="<?php st_wrap_class(); ?>">
 			<header id="<?php st_head_class(); ?>">
-			<div class="clearfix" id="headbox">
-			<!-- アコーディオン -->
-			<div class="sp" id="nav-drawer">
-					<input id="nav-input" type="checkbox" class="nav-unshown">
-					<label id="nav-open" for="nav-input"><span></span></label>
-					<label class="nav-unshown" id="nav-close" for="nav-input"></label>
-					<div id="nav-content">
-						<?php if ( is_active_sidebar( 10 ) ) { ?>
-						<div class="side-topad">
-							<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 10 ) ) : else : //サイドバートップのみのウィジェット ?>
-							<?php endif; ?>
-						</div>
-						<?php } ?>
-					</div>
-				</div>
-			<!-- /アコーディオン -->
-			<a class="sp search-icon" href="#modal-p01"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/search-white.svg" ></a>
-				<section class="modal-window" id="modal-p01">
-					<div class="modal-inner">
-						<?php get_search_form(); ?>
-					</div>
-					<a href="#!" class="modal-close">&times;</a>
-				</section>
+                    <div class="clearfix" id="headbox">
+                        <div class="pc header-search" >
+                            <?php get_search_form(); ?>
+                        </div>
+                        <!-- アコーディオン -->
+                        <div class="sp" id="nav-drawer">
+                            <input id="nav-input" type="checkbox" class="nav-unshown">
+                            <label id="nav-open" for="nav-input"><span></span></label>
+                            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                            <div id="nav-content">
+                                <?php if ( is_active_sidebar( 10 ) ) { ?>
+                                <div class="side-topad">
+                                    <?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 10 ) ) : else : //サイドバートップのみのウィジェット ?>
+                                    <?php endif; ?>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <!-- /アコーディオン -->
+                        <a class="sp search-icon" href="#modal-p01"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/search-white.svg" ></a>
+                        <section class="modal-window" id="modal-p01">
+                            <div class="modal-inner">
+                                <?php get_search_form(); ?>
+                            </div>
+                            <a href="#!" class="modal-close">&times;</a>
+                        </section>
 
-			<div id="header-l">
-				<!-- ロゴ又はブログ名 -->
-				<p class="sitename"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<img class="pc" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" >
-						<img class="sp" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-white.png" >
-					</a></p>
+                        <div id="header-l">
+                            <!-- ロゴ又はブログ名 -->
+                            <p class="sitename"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <img class="pc" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" >
+                                <img class="sp" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-white.png" >
+                            </a></p>
 
-			</div><!-- /#header-l -->
-			<div id="header-r" class="smanone">
-				<?php if ( isset($GLOBALS['stdata43']) && $GLOBALS['stdata43'] === 'yes' ) {
-					get_template_part( 'st-footer-link' ); //フッターリンク 
-				} ?>
-				<?php get_template_part( 'st-header-widget' ); //電話番号とヘッダー用ウィジェット ?>
-			</div><!-- /#header-r -->
-			</div><!-- /#clearfix -->
-				<?php get_template_part( 'st-header-image' ); //カスタムヘッダー画像 ?>
-				<?php //カテゴリ表示
-						if ( isset($GLOBALS['stdata60']) && $GLOBALS['stdata60'] === 'yes' ) {
-
-						} else {
-
-						$categories = get_the_category();
-						$separator = ' ';
-						$output = ''; ?>
-				<p class="st-catgroup sp">
-					<?php
-							if ( $categories ) {
-							foreach( $categories as $category ) {
-							$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="'
-							. esc_attr( sprintf( "View all posts in %s", $category->name ) )
-							. '"><span class="catname st-catid' . $category->cat_ID . '">' . $category->cat_name . '</span></a>' . $separator;
-							}
-							echo trim( $output, $separator );
-							} ?>
-				</p>
-				<?php
-						} //カテゴリ表示ここまで
-						?>
-
+                        </div><!-- /#header-l -->
+                        <div id="header-r" class="smanone">
+                            <?php if ( isset($GLOBALS['stdata43']) && $GLOBALS['stdata43'] === 'yes' ) {
+                                    get_template_part( 'st-footer-link' ); //フッターリンク
+                                    } ?>
+                            <?php get_template_part( 'st-header-widget' ); //電話番号とヘッダー用ウィジェット ?>
+                        </div><!-- /#header-r -->
+                    </div><!-- /#clearfix -->
+                    <?php get_template_part( 'st-header-image' ); //カスタムヘッダー画像 ?>
 			</header>

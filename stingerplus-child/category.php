@@ -1,33 +1,36 @@
 <?php get_header(); ?>
 <div id="breadcrumb">
-    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"> <span itemprop="title"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/home.png"></span> </a> &gt;
+    <div class="inner">
+        <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"> <span itemprop="title"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/home.svg"></span> </a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg">
+        </div>
+        <?php /*--- カテゴリーが階層化している場合に対応させる --- */ ?>
+        <?php
+                $catid = get_query_var('cat');
+                if( !$catid ){
+                $cat_now = get_the_category();
+                $cat_now = $cat_now[0];
+                $catid  = $cat_now->cat_ID;
+                }
+                ?>
+        <?php $allcats = array( $catid ); ?>
+        <?php
+                while ( !$catid == 0 ) {    /* すべてのカテゴリーIDを取得し配列にセットするループ */
+                $mycat = get_category( $catid );    /* カテゴリーIDをセット */
+                $catid = $mycat->parent;    /* 上で取得したカテゴリーIDの親カテゴリーをセット */
+                array_push( $allcats, $catid );
+                }
+                array_pop( $allcats );
+                $allcats = array_reverse( $allcats );
+                ?>
+        <?php /*--- 親カテゴリーがある場合は表示させる --- */ ?>
+        <?php foreach ( $allcats as $catid ): ?>
+        <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="<?php echo esc_url( get_category_link( $catid ) ); ?>" itemprop="url">
+                <span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span></span> </a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
+        <?php endforeach; ?>
     </div>
-    <?php /*--- カテゴリーが階層化している場合に対応させる --- */ ?>
-    <?php
-            $catid = get_query_var('cat');
-            if( !$catid ){
-            $cat_now = get_the_category();
-            $cat_now = $cat_now[0];
-            $catid  = $cat_now->cat_ID;
-            }
-            ?>
-    <?php $allcats = array( $catid ); ?>
-    <?php
-            while ( !$catid == 0 ) {    /* すべてのカテゴリーIDを取得し配列にセットするループ */
-            $mycat = get_category( $catid );    /* カテゴリーIDをセット */
-            $catid = $mycat->parent;    /* 上で取得したカテゴリーIDの親カテゴリーをセット */
-            array_push( $allcats, $catid );
-            }
-            array_pop( $allcats );
-            $allcats = array_reverse( $allcats );
-            ?>
-    <?php /*--- 親カテゴリーがある場合は表示させる --- */ ?>
-    <?php foreach ( $allcats as $catid ): ?>
-    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-        <a href="<?php echo esc_url( get_category_link( $catid ) ); ?>" itemprop="url">
-            <span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a> &gt; </div>
-    <?php endforeach; ?>
+
 </div>
 <div id="content" class="clearfix">
     <div id="contentInner">
