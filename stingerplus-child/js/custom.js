@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $('header .inner').css({"width": window.innerWidth + "px"});
+
+
     $("#toc_container .toc_title").click(function () {
         $(".toc_list").toggle("fast");
     });

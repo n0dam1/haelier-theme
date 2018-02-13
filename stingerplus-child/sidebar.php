@@ -27,6 +27,8 @@
 
 
 
+		<?php get_template_part( 'kanren' ); ?>
+
 		<div id="mybox">
 			<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 1 ) ) : else : //サイドウイジェット読み込み ?>
 			<?php endif; ?>
