@@ -15,3 +15,13 @@ if (locate_template('/st-widgets.php') !== '') {
 require_once locate_template('/st-widgets.php');
 }
 
+add_action('init', function() {
+	remove_filter('the_excerpt', 'wpautop');
+	remove_filter('the_content', 'wpautop');
+});
+
+add_filter('tiny_mce_before_init', function($init) {
+	$init['wpautop'] = false;
+	$init['apply_source_formatting'] = ture;
+	return $init;
+});
