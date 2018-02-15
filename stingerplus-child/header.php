@@ -12,7 +12,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" >
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 		<meta name="format-detection" content="telephone=no" >
-		
+
 		<?php if ( is_home() && !is_paged() ): ?>
 			<meta name="robots" content="index,follow">
 		<?php elseif ( is_search() or is_404() ): ?>
@@ -44,7 +44,15 @@
 		<script src="<?php echo get_stylesheet_directory_uri() ?>/js/custom.js"></script>
 	</head>
 	<body <?php body_class(); ?> >
-	
+		<!-- Google Adsense ここから -->
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-2209633341577716",
+		    enable_page_level_ads: true
+		  });
+		</script>
+		<!-- Google Adsense ここまで -->
 		<div id="wrapper" class="<?php st_wrap_class(); ?>">
 			<header id="<?php st_head_class(); ?>">
                 <div class="inner">
