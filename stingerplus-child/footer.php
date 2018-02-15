@@ -17,7 +17,7 @@
 <?php } ?>
 <?php get_template_part( 'st-footer-link' ); //フッターリンク ?>
 	<div class="copyright">
-		<p>Copyright🄫HAELIER[ハエリエ]</p>
+		<p>Copyright &copy; HAELIER[ハエリエ]</p>
 	</div>
 </footer>
 </div>

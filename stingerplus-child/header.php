@@ -55,6 +55,7 @@
 		<!-- Google Adsense ここまで -->
 		<div id="wrapper" class="<?php st_wrap_class(); ?>">
 			<header id="<?php st_head_class(); ?>">
+                <div class="inner">
                     <div class="clearfix" id="headbox">
                         <div class="pc header-search" >
                             <?php get_search_form(); ?>
@@ -85,8 +86,8 @@
                         <div id="header-l">
                             <!-- ロゴ又はブログ名 -->
                             <p class="sitename"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <img class="pc" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" >
-                                <img class="sp" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-white.png" >
+                                <img class="pc" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/logo.svg" >
+                                <img class="sp" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/logo-white.svg" >
                             </a></p>
 
                         </div><!-- /#header-l -->
@@ -98,4 +99,5 @@
                         </div><!-- /#header-r -->
                     </div><!-- /#clearfix -->
                     <?php get_template_part( 'st-header-image' ); //カスタムヘッダー画像 ?>
+                </div>
 			</header>

@@ -1,3 +1,9 @@
+<?php
+		/*
+		Template Name: top
+		*/
+		?>
+
 <?php get_header(); ?>
 
 <div id="content" class="clearfix">
@@ -20,49 +26,9 @@
 				
 		<?php } //アイキャッチ画像を挿入ここまで ?>
 
-	<!--ぱんくず -->
-					<div id="breadcrumb">
-						<div class="inner">
-							<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-								<a href="<?php echo home_url(); ?>" itemprop="url"> <span itemprop="title">HOME</span>
-								</a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
-							<?php $postcat = get_the_category(); ?>
-							<?php $catid = $postcat[0]->cat_ID; ?>
-							<?php $allcats = array( $catid ); ?>
-							<?php
-									while ( !$catid == 0 ) {
-									$mycat = get_category( $catid );
-									$catid = $mycat->parent;
-									array_push( $allcats, $catid );
-									}
-									array_pop( $allcats );
-									$allcats = array_reverse( $allcats );
-									?>
-							<?php foreach ( $allcats as $catid ): ?>
-							<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-								<a href="<?php echo get_category_link( $catid ); ?>" itemprop="url">
-									<span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span></span> </a> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/svg/angle-right-gray.svg"> </div>
-							<?php endforeach; ?>
-						</div>
-					</div>
-					<!--/ ぱんくず -->
 					<!--ループ開始 -->
 					<?php if (have_posts()) : while (have_posts()) :
 					the_post(); ?>
-
-					<h1 class="entry-title"><?php the_title(); //タイトル ?></h1>
-
-					<div class="blogbox <?php st_hidden_class(); ?>">
-						<p><span class="kdate"><i class="fa fa-pencil" aria-hidden="true"></i>
-             					<time class="entry-date date updated" datetime="<?php the_time(DATE_W3C); ?>">
-							<?php the_time( 'Y/m/d' ); ?>
-						</time>
-						<?php if ( $mtime = st_get_mtime( 'Y/m/d' ) ) {
-							echo ' <i class="fa fa-repeat"></i> ', $mtime;
-						} ?>
-						</span></p>
-					</div>
-
 					<div class="mainbox">
 
 						<?php the_content(); //本文 ?>
@@ -109,7 +75,7 @@
 							} ?>
 						<?php } ?>
 						<!--関連記事-->
-						<?php get_template_part( 'kanren' ); ?>
+
 					</aside>
 
 				</div>
@@ -119,6 +85,7 @@
 	</div>
 	<!-- /#contentInner -->
 	<?php get_sidebar(); ?>
+
 </div>
 <!--/#content -->
 <?php get_footer(); ?>
